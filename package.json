@@ -1,0 +1,18 @@
+{
+  "name": "random",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/node": "^8.3.1",
+    "@stripe/stripe-js": "^3.5.0",
+    "astro": "^4.10.3",
+    "stripe": "^15.12.0"
+  }
+}

@@ -1,0 +1,83 @@
+ <!-- Review -->
+ <section class="review container" id="review">
+    <div class="heading">
+      <h2>Customer's Reviews</h2>
+    </div>
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
+          <div class="review-box">
+            <img src="images/review-1.jpg" alt="" />
+            <h2>Jonas Blue</h2>
+            <span
+              >The taste of coffee is Stunning,<br />
+              subtle and smooth flavor.</span
+            >
+            <p>
+              The taste of coffee can vary depending on the type of bean,
+              roast level, and brewing method used. Some people prefer a
+              strong and bold taste, while others prefer a more subtle and
+              smooth flavor.
+            </p>
+          </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+          <div class="review-box">
+            <img src="images/review-2.jpg" alt="" />
+            <h2>Eden Blue</h2>
+            <span
+              >The taste of coffee is Stunning,<br />
+              subtle and smooth flavor.</span
+            >
+            <p>
+              The taste of coffee can vary depending on the type of bean,
+              roast level, and brewing method used. Some people prefer a
+              strong and bold taste, while others prefer a more subtle and
+              smooth flavor.
+            </p>
+          </div>
+        </div>
+        <!-- Slide 3 -->
+        <div class="swiper-slide">
+          <div class="review-box">
+            <img src="images/review-3.jpg" alt="" />
+            <h2>Charlie</h2>
+            <span
+              >The taste of coffee is Stunning,<br />
+              subtle and smooth flavor.</span
+            >
+            <p>
+              The taste of coffee can vary depending on the type of bean,
+              roast level, and brewing method used. Some people prefer a
+              strong and bold taste, while others prefer a more subtle and
+              smooth flavor.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
+
+  
+  <script 
+  src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+  >
+    // Swiper
+let swiper = new Swiper(".mySwiper", {
+  spaceBetween: 30,
+  centeredSlides: true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
+  </script>

@@ -1,0 +1,27 @@
+---
+const PUBLIC_STRIPE_KEY = import.meta.env.PUBLIC_STRIPE_KEY
+const stripe = new Stripe(import.meta.env.STRIPE_KEY)
+const session = await stripe.checkout.sessions.create({
+    //options here... 
+    ui_mode: 'embedded',
+    mode: 'subscription',
+    automatic_tax: {enabled: true},
+    return_url: `${origin}/return/session_id={CHECKOUT_SESSION_ID}`
+})
+const { origin } = Astro.url
+---
+
+<div id="'checkout" data-stripe-key={PUBLIC_STRIPE_KEY}></div>
+
+<script>
+    import { loadStripe } from '@stripe/stripe-js';
+    const checkoutDiv = document.querySelector('#checkout')
+    const stripe = await loadStripe(checkoutDiv.CDATA_SECTION_NODE.stripeKey);
+
+    const checkout = await stripe.initEmbeddedCheckout({
+        async fetchClientSecret() {
+            //return client secret
+            
+        }
+    })
+</script>

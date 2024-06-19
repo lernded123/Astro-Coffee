@@ -1,0 +1,62 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+import Hero from '../components/Hero.astro';
+import Services from '../components/Services.astro';
+import Products from '../components/Products.astro';
+import Team from '../components/Team.astro'
+import Review from '../components/Review.astro'
+import Book from '../components/Book.astro'
+
+---
+
+<Layout title="Coffee Shop">
+	
+ 
+
+  
+
+    <Hero />
+    <Services />
+    <Products />
+    <Team />
+    <Review />
+    <Book />
+
+
+</Layout>
+
+
+
+<script>
+
+
+// Menu Open Close
+let menu = document.querySelector(".menu-icon");
+let navbar = document.querySelector(".navbar");
+
+menu.onclick = () => {
+  menu.classList.toggle("move");
+  navbar.classList.toggle("open-menu");
+};
+// Close Menu On Scroll
+window.onscroll = () => {
+  menu.classList.remove("move");
+  navbar.classList.remove("open-menu");
+};
+// ScrollReveal Animation
+const animate = ScrollReveal({
+  origin: "top",
+  distance: "60px",
+  duration: "2500",
+  delay: "400",
+});
+
+animate.reveal(".nav");
+animate.reveal(".home-text", { origin: "left" });
+animate.reveal(".home-img", { origin: "bottom" });
+animate.reveal(".ser-box, .product-box,.team-box,.book-data", {
+  interval: 100,
+});
+
+</script>
