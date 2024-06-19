@@ -1,3 +1,10 @@
+---
+import review1 from '../images/review-1.jpg'
+import review2 from '../images/review-2.jpg'
+import review3 from '../images/review-3.jpg'
+---
+ 
+ 
  <!-- Review -->
  <section class="review container" id="review">
     <div class="heading">
@@ -9,7 +16,7 @@
         <!-- Slide 1 -->
         <div class="swiper-slide">
           <div class="review-box">
-            <img src="images/review-1.jpg" alt="" />
+            <img src={review1.src} alt="" />
             <h2>Jonas Blue</h2>
             <span
               >The taste of coffee is Stunning,<br />
@@ -26,7 +33,7 @@
         <!-- Slide 2 -->
         <div class="swiper-slide">
           <div class="review-box">
-            <img src="images/review-2.jpg" alt="" />
+            <img src={review2.src} alt="" />
             <h2>Eden Blue</h2>
             <span
               >The taste of coffee is Stunning,<br />
@@ -43,7 +50,7 @@
         <!-- Slide 3 -->
         <div class="swiper-slide">
           <div class="review-box">
-            <img src="images/review-3.jpg" alt="" />
+            <img src={review3.src} alt="" />
             <h2>Charlie</h2>
             <span
               >The taste of coffee is Stunning,<br />
@@ -68,7 +75,7 @@
   src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
   >
     // Swiper
-let swiper = new Swiper(".mySwiper", {
+  let swiper = new Swiper(".mySwiper", {
   spaceBetween: 30,
   centeredSlides: true,
   autoplay: {
